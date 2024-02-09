@@ -19,4 +19,6 @@ app.register(getPoll);
 app.register(voteOnPoll);
 app.register(pollResults);
 
-app.listen({ port: 3333 }).then(() => console.log('HTTP server running'));
+app
+  .listen({ port: Number(process.env.PORT!) })
+  .then(() => console.log('HTTP server running'));
