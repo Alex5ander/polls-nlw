@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
+console.log(process.env);
 const prisma = new PrismaClient({
-  datasourceUrl: process.env.DATABASE_URL!,
   log: ['query'],
 });
 export { prisma };
